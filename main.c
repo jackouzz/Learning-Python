@@ -3,11 +3,11 @@ int main()
 {
   //char Mystring[9];
   int temp;
-  //for (temp=0;temp<9;temp++)
-   // {
-     // Mystring[temp] = 'A';
-     // 
-   // }
+    //for (temp=0;temp<9;temp++)
+    // {
+    // Mystring[temp] = 'A';
+    //
+    // }
 	//temp = PrintChar ( & Mystring );
 	temp =  0;
 	if (temp == 0) 
