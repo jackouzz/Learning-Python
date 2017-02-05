@@ -1,2 +1,2 @@
-# python
-study python
+# Study GitHub
+i finished the guide.
