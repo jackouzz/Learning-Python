@@ -1,2 +1,2 @@
 # Study GitHub
-i finished the guide.
+I have finished the guide.
