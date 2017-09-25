@@ -14,5 +14,5 @@ int PrintChar ( char * string )
         temp = *string;
     }
     return(0);
-
+//仅仅是测试
 }
