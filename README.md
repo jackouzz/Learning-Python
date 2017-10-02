@@ -1,3 +1,2 @@
-# Study GitHub
-I have finished the guide.
+I have finished the GitHub guide.
 # Learning Python
