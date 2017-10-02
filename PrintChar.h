@@ -15,4 +15,5 @@ int PrintChar ( char * string )
     }
     return(0);
 //仅仅是测试是不够的
+//python开发环境测试2017.10.2
 }
