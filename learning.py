@@ -2,7 +2,8 @@
 # -*- coding: utf-8 -*-
 
 def triangles(max):
-    n,i
+    n=0
+    i=0
     L=[1]
     while n<max :
         yield L
@@ -21,6 +22,7 @@ def Display():
 
 def main():
     #Display()
+
     for g in triangles(7):
         print (g)
 
