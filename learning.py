@@ -1,15 +1,14 @@
 #!/user/bin/env python3
 # -*- coding: utf-8 -*-
 
-def triangles(max):
-    n=0
+#生成杨辉三角形
+def triangles():
     i=0
     L=[1]
-    while n<max :
+    while True :
         yield L
         L.append(0)
         L = [L[i - 1] + L[i] for i in range(len(L))]
-        n=n+1
 
     return
 
@@ -22,9 +21,12 @@ def Display():
 
 def main():
     #Display()
-
-    for g in triangles(7):
+    n=0
+    for g in triangles():
         print (g)
+        n=n+1
+        if n == 11 :
+            break
 
     return
 
