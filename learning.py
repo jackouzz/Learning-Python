@@ -1,6 +1,15 @@
 #!/user/bin/env python3
 # -*- coding: utf-8 -*-
 
+from functools import reduce
+
+def prod(L):
+    print(L)
+    def fx(x,y):
+        return x*y
+
+    return reduce(fx,L)
+
 #字符串首写字母大写其余小写
 def normalize(name):
     return name.capitalize()
@@ -47,6 +56,7 @@ def main():
     #Display()
     #Showtriangles()
     ShowMap()
+    print('3 * 5 * 7 * 9 =', prod([3, 5, 7, 9]))
 
     return
 
