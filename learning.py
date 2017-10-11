@@ -3,6 +3,16 @@
 
 from functools import reduce
 
+def by_score(t):
+    i = t[1]
+    print (i)
+    return i
+
+def by_name(t):
+    i = t[0]
+    print (i)
+    return i
+
 #判断是否回数
 def is_palindrome(n):
     if n < 10 :
@@ -79,8 +89,14 @@ def main():
     #showMap()
     #print('3 * 5 * 7 * 9 =', prod([3, 5, 7, 9]))
     #print('str2float(\'123.456\') =', str2float('123.456'))
-    output = filter(is_palindrome, range(9999, 99999))
-    print(list(output))
+    #output = filter(is_palindrome, range(9999, 99999))
+    #print(list(output))
+    L = [('Bob', 75), ('Adam', 92), ('Bart', 66), ('Lisa', 88)]
+    print(L)
+    L2=sorted(L,key=by_score)
+    print(L2)
+    L2 = sorted(L, key=by_name)
+    print(L2)
 
     return
 
