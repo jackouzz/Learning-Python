@@ -1,7 +1,27 @@
 #!/user/bin/env python3
 # -*- coding: utf-8 -*-
 
+__author__ = 'Jack Kou'
+
 from functools import reduce
+
+class Student(object):
+
+    def __init__(self, name, score):
+        self.name = name
+        self.score = score
+
+    def print_score(self):
+        print('%s: %s' % (self.name, self.score))
+
+    def get_grade(self):
+        if self.score >= 90:
+            return 'A'
+        elif self.score >= 60:
+            return 'B'
+        else:
+            return 'C'
+
 
 #装饰器使用
 def log(func):
@@ -109,7 +129,21 @@ def main():
     #print(L2)
     #L2 = sorted(L, key=by_name)
     #print(L2)
-    now()
+    #now()
+
+    bart=Student('Jack',100)
+    coco=Student('Momo',80)
+    xxoo=Student('Loser',50)
+
+    bart.print_score()
+    print(bart.get_grade())
+
+    coco.print_score()
+    print(coco.get_grade())
+
+    xxoo.print_score()
+    print(xxoo.get_grade())
+
 
     return
 
