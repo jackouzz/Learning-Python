@@ -3,6 +3,18 @@
 
 from functools import reduce
 
+#装饰器使用
+def log(func):
+    def wrapper(*args, **kw):
+        print('begin call: %s():' % func.__name__)
+        func(*args, **kw)
+        return print('end call')
+    return wrapper
+
+@log
+def now():
+    print('2015-3-25')
+
 def by_score(t):
     i = t[1]
     print (i)
@@ -91,12 +103,13 @@ def main():
     #print('str2float(\'123.456\') =', str2float('123.456'))
     #output = filter(is_palindrome, range(9999, 99999))
     #print(list(output))
-    L = [('Bob', 75), ('Adam', 92), ('Bart', 66), ('Lisa', 88)]
-    print(L)
-    L2=sorted(L,key=by_score)
-    print(L2)
-    L2 = sorted(L, key=by_name)
-    print(L2)
+    #L = [('Bob', 75), ('Adam', 92), ('Bart', 66), ('Lisa', 88)]
+    #print(L)
+    #L2=sorted(L,key=by_score)
+    #print(L2)
+    #L2 = sorted(L, key=by_name)
+    #print(L2)
+    now()
 
     return
 
