@@ -5,6 +5,19 @@ __author__ = 'Jack Kou'
 
 from functools import reduce
 
+class Fib(object):
+    def __init__(self):
+        self.a, self.b = 0, 1 # 初始化两个计数器a，b
+
+    def __iter__(self):
+        return self # 实例本身就是迭代对象，故返回自己
+
+    def __next__(self):
+        self.a, self.b = self.b, self.a + self.b # 计算下一个值
+        if self.a > 100000: # 退出循环的条件
+            raise StopIteration()
+        return self.a # 返回下一个值
+
 class Student(object):
 
     def __init__(self, name, score):
@@ -131,18 +144,21 @@ def main():
     #print(L2)
     #now()
 
-    bart=Student('Jack',100)
-    coco=Student('Momo',80)
-    xxoo=Student('Loser',50)
+    #bart=Student('Jack',100)
+    #coco=Student('Momo',80)
+    #xxoo=Student('Loser',50)
 
-    bart.print_score()
-    print(bart.get_grade())
+    #bart.print_score()
+    #print(bart.get_grade())
 
-    coco.print_score()
-    print(coco.get_grade())
+    #coco.print_score()
+    #print(coco.get_grade())
 
-    xxoo.print_score()
-    print(xxoo.get_grade())
+    #xxoo.print_score()
+    #print(xxoo.get_grade())
+
+    for n in Fib():
+        print(n)
 
 
     return
